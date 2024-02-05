@@ -2,8 +2,8 @@ import { useState } from 'react'
 
 function Test() {
 
-    const[counter,setcounter]=useState(0)
-    const [message, setMessage] = useState('');
+    let [counter,setcounter]=useState(0)
+    let [message, setMessage] = useState('')
   
    
     let addvalue=()=>
@@ -16,7 +16,7 @@ function Test() {
          setcounter(counter++)
           }
      }
-     const subvalue=()=>
+     let subvalue=()=>
      {
       if(counter<0)
       { 
@@ -31,8 +31,10 @@ function Test() {
 
     return (
         <div>
-      <h1>Hello Paaji!</h1>
-      <button onClick={addvalue}>Add {counter}</button> <br></br>
+
+          <p>{counter}</p>
+     
+      <button onClick={addvalue}>Add{counter}</button> <br></br>
       <button onClick={subvalue}>Remove {counter}</button>
       <h1>{message}</h1>
       </div>
